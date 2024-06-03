@@ -3,7 +3,7 @@
 import {
     validateLogin,
 }
-from '../qa/reusable.cy';
+from '../qa/reusable2.cy';
 
 describe("Appointment History", () => {
 

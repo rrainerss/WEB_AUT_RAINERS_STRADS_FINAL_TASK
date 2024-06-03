@@ -1,6 +1,10 @@
+import Url from '../pageObjects/url.page';
+const url = new Url();
+
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('https://demoqa.com/automation-practice-form');
+    url.visitForm();
+
     cy.get('#firstName').type('Firstname');
     cy.get('#lastName').type('Lastname');
     cy.get('#userEmail').type('user@email.com');
@@ -39,8 +43,6 @@ describe('template spec', () => {
     cy.get('.css-1n7v3ny-option').click();
 
     cy.get('#submit').click();
-    
-    // cy.get('#submit').click();
   })
   Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
